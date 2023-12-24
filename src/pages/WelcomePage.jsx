@@ -72,13 +72,14 @@ export const WelcomePage = () => {
         }}
       >
         <Typography component="h2" variant="h5">
-          Сообщение о краже
+          Theft report
         </Typography>
         <Box sx={{ marginTop: 1 }}>
           <Typography>
-            Добро пожаловать на сервис проката велосипедов. Заполнив форму ниже,
-            вы сможете сообщить нам о краже велосипеда. Если вы сотрудник, вы
-            можете войти в сервис как сотрудник или зарегистрироваться.
+            Welcome to the bike rental service. By filling out the form below,
+            you will be able to inform us about the theft of the bike. If you
+            are an employee, you you can log in to the service as an employee or
+            register.
           </Typography>
         </Box>
 
@@ -93,7 +94,7 @@ export const WelcomePage = () => {
               <TextField
                 required
                 fullWidth
-                label="Номер лицензии"
+                label="License number"
                 name="licenseNumber"
                 id="licenseNumber"
                 onChange={handleChange}
@@ -108,7 +109,7 @@ export const WelcomePage = () => {
                 fullWidth
                 name="ownerFullName"
                 id="ownerFullName"
-                label="ФИО арендатора"
+                label="Owner Full Name"
                 onChange={handleChange}
                 value={formValues.ownerFullName}
                 error={isSubmitted && !formValues.ownerFullName}
@@ -117,18 +118,18 @@ export const WelcomePage = () => {
             </Grid>
             <Grid item xs={12} sm={6}>
               <FormControl required fullWidth>
-                <InputLabel id="type">Тип велосипеда</InputLabel>
+                <InputLabel id="type">Bike Type</InputLabel>
                 <Select
                   name="type"
                   id="type"
                   value={formValues.type}
                   error={isSubmitted && !formValues.type}
-                  label="Тип велосипеда"
+                  label="Bike Type"
                   onChange={handleChange}
                   disabled={isLoading}
                 >
-                  <MenuItem value={"general"}>Обычный</MenuItem>
-                  <MenuItem value={"sport"}>Спортивный</MenuItem>
+                  <MenuItem value={"general"}>General</MenuItem>
+                  <MenuItem value={"sport"}>Sport</MenuItem>
                 </Select>
               </FormControl>
             </Grid>
@@ -138,7 +139,7 @@ export const WelcomePage = () => {
                 fullWidth
                 name="clientId"
                 id="clientId"
-                label="Уникальный номер - clientId"
+                label="Unique number - clientId"
                 onChange={handleChange}
                 value={formValues.clientId}
                 error={isSubmitted && !formValues.clientId}
@@ -148,7 +149,7 @@ export const WelcomePage = () => {
             <Grid item xs={12} sm={6}>
               <TextField
                 fullWidth
-                label="Цвет велосипеда"
+                label="Color"
                 name="color"
                 id="color"
                 onChange={handleChange}
@@ -160,7 +161,7 @@ export const WelcomePage = () => {
               <DatePicker
                 name="date"
                 id="date"
-                label="Дата кражи"
+                label="Date of theft"
                 onChange={handleChangeDate}
                 value={formValues.date ? dayjs(formValues.date) : null}
                 disabled={isLoading}
@@ -172,7 +173,7 @@ export const WelcomePage = () => {
                 fullWidth
                 name="description"
                 id="description"
-                label="Дополнительный комментарий"
+                label="Additional comment"
                 onChange={handleChange}
                 value={formValues.description}
                 disabled={isLoading}
@@ -186,7 +187,7 @@ export const WelcomePage = () => {
             disabled={isLoading}
             sx={{ mt: 3, mb: 2 }}
           >
-            {isLoading ? "Загрузка..." : "Отправить"}
+            {isLoading ? "Loading..." : "Send"}
           </Button>
         </Box>
       </Box>

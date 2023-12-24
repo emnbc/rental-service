@@ -49,7 +49,7 @@ export const OfficerPage = () => {
         }}
       >
         <Typography component="h2" variant="h5">
-          Ответственный сотрудник
+          Responsible employee
         </Typography>
       </Box>
       <OfficerForm
@@ -79,14 +79,14 @@ export const OfficerPage = () => {
               variant="contained"
               disabled={officersState.isProcessing}
             >
-              {officersState.isProcessing ? "Сохранение..." : "Сохранить"}
+              {officersState.isProcessing ? "Saving..." : "Save"}
             </Button>
           )}
           <Button
             onClick={() => setIsBlocked(isBlocked ? false : true)}
             autoFocus
           >
-            {isBlocked ? "Редактировать" : "Отмена"}
+            {isBlocked ? "Edit" : "Cancel"}
           </Button>
         </Box>
       )}

@@ -56,7 +56,7 @@ class OfficerListPage extends React.Component {
           }}
         >
           <Typography component="h2" variant="h5">
-            Ответственные сотрудники
+            Responsible employees
           </Typography>
           <NewOfficer />
         </Box>
@@ -66,10 +66,10 @@ class OfficerListPage extends React.Component {
               <TableHead>
                 <TableRow>
                   <TableCell>Email</TableCell>
-                  <TableCell align="right">Имя</TableCell>
-                  <TableCell align="right">Фамилия</TableCell>
-                  <TableCell align="right">Статус</TableCell>
-                  <TableCell align="right">Действия</TableCell>
+                  <TableCell align="right">First Name</TableCell>
+                  <TableCell align="right">Last Name</TableCell>
+                  <TableCell align="right">Status</TableCell>
+                  <TableCell align="right">Actions</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -84,7 +84,7 @@ class OfficerListPage extends React.Component {
                     <TableCell align="right">{row.firstName}</TableCell>
                     <TableCell align="right">{row.lastName}</TableCell>
                     <TableCell align="right">
-                      {row.approved ? "Одобренный" : "Неодобренный"}
+                      {row.approved ? "Approved" : "Not approved"}
                     </TableCell>
                     <TableCell align="right">
                       <Button
@@ -93,7 +93,7 @@ class OfficerListPage extends React.Component {
                         variant="outlined"
                         size="small"
                       >
-                        Редактировать
+                        Edit
                       </Button>
                       <IconButton
                         aria-label="delete"

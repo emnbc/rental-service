@@ -30,7 +30,7 @@ export const Header = () => {
           color="inherit"
           to="/cases"
         >
-          Сообщения о кражах
+          Theft reports
         </Link>
         <Link
           component={RouterLink}
@@ -38,7 +38,7 @@ export const Header = () => {
           color="inherit"
           to="/officers"
         >
-          Сотрудники
+          Employees
         </Link>
       </Box>
     </nav>
@@ -47,17 +47,17 @@ export const Header = () => {
   const logInButton = (
     <Box>
       <Button color="inherit" onClick={() => navigate("/login")}>
-        Войти
+        Sign In
       </Button>
       <Button color="inherit" onClick={() => navigate("/register")}>
-        Регистрация
+        Register
       </Button>
     </Box>
   );
 
   const logOutButton = (
     <Button color="inherit" onClick={logOut}>
-      Выйти
+      Sign Out
     </Button>
   );
 
@@ -75,7 +75,7 @@ export const Header = () => {
               noWrap
               onClick={() => navigate("/")}
             >
-              Сервис проката велосипедов
+              Bike Rental Service
             </Typography>
           </Box>
           {userState.isLoggedIn && navBar}

@@ -44,7 +44,7 @@ export const NewCase = () => {
   return (
     <>
       <Button variant="contained" onClick={handleOpen}>
-        Сообщить о краже
+        Report a theft
       </Button>
       <Dialog
         open={open}
@@ -52,7 +52,7 @@ export const NewCase = () => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle>Сообщение о краже</DialogTitle>
+        <DialogTitle>Theft report</DialogTitle>
         <DialogContent>
           <CaseForm
             {...{
@@ -69,7 +69,7 @@ export const NewCase = () => {
             autoFocus
             disabled={casesState.isProcessing}
           >
-            {casesState.isProcessing ? "Сохранение..." : "Сохранить"}
+            {casesState.isProcessing ? "Saving..." : "Save"}
           </Button>
         </DialogActions>
       </Dialog>

@@ -13,14 +13,14 @@ export const ConfirmRemove = (props) => {
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
-      <DialogTitle>Удаление</DialogTitle>
-      <DialogContent>Вы уверены, что хотите удалить запись?</DialogContent>
+      <DialogTitle>Remove</DialogTitle>
+      <DialogContent>Are you sure you want to remove this item?</DialogContent>
       <DialogActions>
         <Button onClick={handleClose} autoFocus disabled={isLoading}>
-          Отмена
+          Cancel
         </Button>
         <Button onClick={() => handleRemove(id)} disabled={isLoading}>
-          {isLoading ? 'Удаление...' : 'Удалить'}
+          {isLoading ? "Removing..." : "Remove"}
         </Button>
       </DialogActions>
     </Dialog>

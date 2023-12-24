@@ -55,7 +55,7 @@ export const RegisterPage = () => {
         }}
       >
         <Typography component="h2" variant="h5">
-          Регистрация
+          Registration
         </Typography>
         <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
           <Grid container spacing={2}>
@@ -78,7 +78,7 @@ export const RegisterPage = () => {
                 required
                 fullWidth
                 name="password"
-                label="Пароль"
+                label="Password"
                 type="password"
                 id="password"
                 onChange={handleChange}
@@ -108,7 +108,7 @@ export const RegisterPage = () => {
                 name="firstName"
                 fullWidth
                 id="firstName"
-                label="Имя"
+                label="First Name"
                 onChange={handleChange}
                 value={formValues.firstName}
                 disabled={isLoading}
@@ -118,7 +118,7 @@ export const RegisterPage = () => {
               <TextField
                 fullWidth
                 id="lastName"
-                label="Фамилия"
+                label="Last Name"
                 name="lastName"
                 onChange={handleChange}
                 value={formValues.lastName}
@@ -134,12 +134,12 @@ export const RegisterPage = () => {
             disabled={isLoading}
             sx={{ mt: 3, mb: 2 }}
           >
-            {isLoading ? "Регистрация..." : "Зарегистрироваться"}
+            {isLoading ? "Registration..." : "Register"}
           </Button>
           <Grid container justifyContent="flex-end">
             <Grid item>
               <Link component={RouterLink} to="/login">
-                Уже есть зарегистрированы? Войти
+                Already have an account? Sign In
               </Link>
             </Grid>
           </Grid>

@@ -48,7 +48,7 @@ export const CasePage = () => {
         }}
       >
         <Typography component="h2" variant="h5">
-          Сообщение о кражах
+          Theft reports
         </Typography>
       </Box>
       <CaseForm
@@ -78,14 +78,14 @@ export const CasePage = () => {
               variant="contained"
               disabled={casesState.isProcessing}
             >
-              {casesState.isProcessing ? "Сохранение..." : "Сохранить"}
+              {casesState.isProcessing ? "Saving..." : "Save"}
             </Button>
           )}
           <Button
             onClick={() => setIsBlocked(isBlocked ? false : true)}
             autoFocus
           >
-            {isBlocked ? "Редактировать" : "Отмена"}
+            {isBlocked ? "Edit" : "Cancel"}
           </Button>
         </Box>
       )}

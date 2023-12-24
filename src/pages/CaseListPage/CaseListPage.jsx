@@ -48,11 +48,11 @@ class CaseListPage extends React.Component {
   getStatus(status) {
     switch (status) {
       case "new":
-        return "Новый";
+        return "New";
       case "in_progress":
-        return "В процессе";
+        return "In progress";
       case "done":
-        return "Завершен";
+        return "Done";
       default:
         return "";
     }
@@ -61,9 +61,9 @@ class CaseListPage extends React.Component {
   getType(type) {
     switch (type) {
       case "sport":
-        return "Спортивный";
+        return "Sport";
       case "general":
-        return "Обычный";
+        return "General";
       default:
         return "";
     }
@@ -82,7 +82,7 @@ class CaseListPage extends React.Component {
           }}
         >
           <Typography component="h2" variant="h5">
-            Сообщения о кражах
+            Theft reports
           </Typography>
           <NewCase />
         </Box>
@@ -92,13 +92,13 @@ class CaseListPage extends React.Component {
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
               <TableHead>
                 <TableRow>
-                  <TableCell>Статус</TableCell>
-                  <TableCell>Дата кражи</TableCell>
-                  <TableCell>Номер лицензии</TableCell>
-                  <TableCell>Тип</TableCell>
-                  <TableCell>ФИО владельца</TableCell>
-                  <TableCell>Цвет</TableCell>
-                  <TableCell align="right">Действия</TableCell>
+                  <TableCell>Status</TableCell>
+                  <TableCell>Date of theft</TableCell>
+                  <TableCell>License number</TableCell>
+                  <TableCell>Type</TableCell>
+                  <TableCell>Full name</TableCell>
+                  <TableCell>Color</TableCell>
+                  <TableCell align="right">Actions</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -122,7 +122,7 @@ class CaseListPage extends React.Component {
                         variant="outlined"
                         size="small"
                       >
-                        Редактировать
+                        Edit
                       </Button>
                       <IconButton
                         aria-label="delete"

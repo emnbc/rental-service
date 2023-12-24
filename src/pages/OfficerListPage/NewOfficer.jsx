@@ -42,7 +42,7 @@ export const NewOfficer = () => {
   return (
     <>
       <Button variant="contained" onClick={handleOpen}>
-        Добавить сотрудника
+        Add employee
       </Button>
       <Dialog
         open={open}
@@ -50,7 +50,7 @@ export const NewOfficer = () => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle>Добавление сотрудника</DialogTitle>
+        <DialogTitle>Add new employee</DialogTitle>
         <DialogContent>
           <OfficerForm
             {...{
@@ -67,9 +67,7 @@ export const NewOfficer = () => {
             autoFocus
             disabled={officersState.isProcessing}
           >
-            {officersState.isProcessing
-              ? "Сохранение..."
-              : "Сохранить"}
+            {officersState.isProcessing ? "Saving..." : "Save"}
           </Button>
         </DialogActions>
       </Dialog>

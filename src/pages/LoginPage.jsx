@@ -9,10 +9,7 @@ import { useState } from "react";
 import { Auth } from "../services/http";
 import { Link as RouterLink, useLocation, Navigate } from "react-router-dom";
 import { AppLocalStore } from "../utils/app-local-store";
-import {
-  selectUser,
-  setUser,
-} from "../reducers/current-user-slice";
+import { selectUser, setUser } from "../reducers/current-user-slice";
 import { useSelector, useDispatch } from "react-redux";
 
 export const LoginPage = () => {
@@ -68,7 +65,7 @@ export const LoginPage = () => {
         }}
       >
         <Typography component="h2" variant="h5">
-          Авторизация
+          Sign In
         </Typography>
         <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
           <Grid container spacing={2}>
@@ -92,7 +89,7 @@ export const LoginPage = () => {
                 fullWidth
                 name="password"
                 id="password"
-                label="Пароль"
+                label="Password"
                 type="password"
                 onChange={handleChange}
                 value={formValues.password}
@@ -109,12 +106,12 @@ export const LoginPage = () => {
             disabled={isLoading}
             sx={{ mt: 3, mb: 2 }}
           >
-            {isLoading ? "Авторизация..." : "Войти"}
+            {isLoading ? "Signing in..." : "Sign In"}
           </Button>
           <Grid container justifyContent="flex-end">
             <Grid item>
               <Link component={RouterLink} to="/register">
-                У вас еще нет аккаунта? Регистрация
+                You haven't an account? Register
               </Link>
             </Grid>
           </Grid>

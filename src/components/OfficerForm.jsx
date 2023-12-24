@@ -61,7 +61,7 @@ export const OfficerForm = (props) => {
                 required
                 fullWidth
                 name="password"
-                label="Пароль"
+                label="Password"
                 type="password"
                 id="password"
                 onChange={handleChange}
@@ -78,7 +78,7 @@ export const OfficerForm = (props) => {
               name="firstName"
               fullWidth
               id="firstName"
-              label="Имя"
+              label="First Name"
               onChange={handleChange}
               value={formValues.firstName || ""}
               disabled={isFormBlocked}
@@ -88,7 +88,7 @@ export const OfficerForm = (props) => {
             <TextField
               fullWidth
               id="lastName"
-              label="Фамилия"
+              label="Last Name"
               name="lastName"
               onChange={handleChange}
               value={formValues.lastName || ""}
@@ -107,7 +107,7 @@ export const OfficerForm = (props) => {
                   disabled={isFormBlocked}
                 />
               }
-              label="Одобренный"
+              label="Approved"
             />
           </Grid>
         </Grid>

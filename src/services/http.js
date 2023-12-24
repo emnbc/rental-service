@@ -49,7 +49,7 @@ export const AxiosInterceptor = ({ children }) => {
     return () => authorizedClient.interceptors.response.eject(interceptor);
   }, [navigate, dispatch, userState.isLoggedIn]);
 
-  return isChecking ? <div>Загрузка...</div> : children;
+  return isChecking ? <div>Loading...</div> : children;
 };
 
 export const Auth = {

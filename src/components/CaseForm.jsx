@@ -57,7 +57,7 @@ export const CaseForm = (props) => {
             <TextField
               required
               fullWidth
-              label="Номер лицензии"
+              label="License number"
               name="licenseNumber"
               id="licenseNumber"
               onChange={handleChange}
@@ -72,7 +72,7 @@ export const CaseForm = (props) => {
               fullWidth
               name="ownerFullName"
               id="ownerFullName"
-              label="ФИО арендатора"
+              label="Full Name"
               onChange={handleChange}
               value={formValues.ownerFullName || ""}
               error={isSubmitted && !formValues.ownerFullName}
@@ -81,34 +81,34 @@ export const CaseForm = (props) => {
           </Grid>
           <Grid item xs={12} sm={6}>
             <FormControl required fullWidth>
-              <InputLabel id="type">Тип велосипеда</InputLabel>
+              <InputLabel id="type">Bike Type</InputLabel>
               <Select
                 name="type"
                 id="type"
                 value={formValues.type || ""}
                 error={isSubmitted && !formValues.type}
-                label="Тип велосипеда"
+                label="Bike Type"
                 onChange={handleChange}
                 disabled={isFormBlocked}
               >
-                <MenuItem value={"general"}>Обычный</MenuItem>
-                <MenuItem value={"sport"}>Спортивный</MenuItem>
+                <MenuItem value={"general"}>General</MenuItem>
+                <MenuItem value={"sport"}>Sport</MenuItem>
               </Select>
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={6}>
             <FormControl fullWidth>
-              <InputLabel id="officer">Ответственный сотрудник</InputLabel>
+              <InputLabel id="officer">Responsible employee</InputLabel>
               <Select
                 name="officer"
                 id="officer"
                 value={formValues.officer || ""}
                 error={isSubmitted && !formValues.officer}
-                label="Ответственный сотрудник"
+                label="Responsible employee"
                 onChange={handleChange}
                 disabled={isFormBlocked}
               >
-                <MenuItem value="">Не задан</MenuItem>
+                <MenuItem value="">Not set</MenuItem>
                 {officerList.map((o) => (
                   <MenuItem key={o._id} value={o._id}>
                     {o.firstName} {o.lastName}
@@ -120,7 +120,7 @@ export const CaseForm = (props) => {
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
-              label="Цвет велосипеда"
+              label="Color"
               name="color"
               id="color"
               onChange={handleChange}
@@ -132,7 +132,7 @@ export const CaseForm = (props) => {
             <DatePicker
               name="date"
               id="date"
-              label="Дата кражи"
+              label="Date of theft"
               onChange={handleChangeDate}
               value={formValues.date ? dayjs(formValues.date) : null}
               disabled={isFormBlocked}
@@ -144,7 +144,7 @@ export const CaseForm = (props) => {
               fullWidth
               name="description"
               id="description"
-              label="Дополнительный комментарий"
+              label="Additional comment"
               onChange={handleChange}
               value={formValues.description || ""}
               disabled={isFormBlocked}
@@ -156,7 +156,7 @@ export const CaseForm = (props) => {
                 fullWidth
                 name="resolution"
                 id="resolution"
-                label="Завершающий комментарий"
+                label="Result comment"
                 onChange={handleChange}
                 value={formValues.resolution || ""}
                 disabled={isFormBlocked}
@@ -166,18 +166,18 @@ export const CaseForm = (props) => {
           {formValues._id && (
             <Grid item xs={12}>
               <FormControl fullWidth>
-                <InputLabel id="status">Статус</InputLabel>
+                <InputLabel id="status">Status</InputLabel>
                 <Select
                   name="status"
                   id="status"
                   value={formValues.status || ""}
-                  label="Статус"
+                  label="Status"
                   onChange={handleChange}
                   disabled={isFormBlocked}
                 >
-                  <MenuItem value={"new"}>Новый</MenuItem>
-                  <MenuItem value={"in_progress"}>В процессе</MenuItem>
-                  <MenuItem value={"done"}>Завершен</MenuItem>
+                  <MenuItem value={"new"}>New</MenuItem>
+                  <MenuItem value={"in_progress"}>In progress</MenuItem>
+                  <MenuItem value={"done"}>Done</MenuItem>
                 </Select>
               </FormControl>
             </Grid>

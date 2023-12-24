@@ -8,13 +8,13 @@ import { store } from "./store/store";
 import { Provider } from "react-redux";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import "dayjs/locale/ru";
+import "dayjs/locale/en";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ru">
+      <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="en">
         <Provider store={store}>
           <App />
         </Provider>
